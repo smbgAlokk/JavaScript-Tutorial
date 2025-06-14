@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Api Request</title>
+  </head>
+  <body style="background-color: #212121; color: #ffff">
+    <h1>XMLHttpRequest (XHR)</h1>
+    <h2>Value State Description</h2>
+    <ul class="li">
+      0 UNSENT Client has been created. open() not called yet.
+    </ul>
+    <ul class="li">
+      1 OPENED open() has been called.
+    </ul>
+    <ul class="li">
+      2 HEADERS_RECEIVED send() has been called, and headers and status are
+      available.
+    </ul>
+    <ul class="li">
+      3 LOADING Downloading; responseText holds partial data.
+    </ul>
+    <ul class="li">
+      4 DONE The operation is complete.
+    </ul>
+    <h1>Click to get Alok's Data</h1>
+    <button class="button">Click</button>
+    <div class="dataCollect"></div>
+  </body>
+  <script>
+    let data;
+    const button = document.querySelector("button");
+    const dataCollect = document.querySelector(".dataCollect");
+    const url = "https://api.github.com/users/smbgalokk";
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", url);
+    xhr.onreadystatechange = function () {
+      console.log(xhr.readyState);
+      if (xhr.readyState === 4) {
+        data = JSON.parse(this.responseText);
+
+        console.log(data);
+        let photo = data.avatar_url;
+      }
+    };
+
+    xhr.send();
+    button.addEventListener("click", function () {
+      dataCollect.innerHTML = `<img src="${data.avatar_url}" width="150" style="border-radius: 50%; margin-bottom: 10px;" />
+  <p><strong>Followers:</strong> ${data.followers}</p>`;
+    });
+  </script>
+</html>
