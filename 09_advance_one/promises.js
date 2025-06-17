@@ -26,9 +26,7 @@ Fulfilled – Kaam ho gaya (success)
 Rejected – Kaam fail ho gaya (error)
 
 ✍️ Hinglish Code Example:
-javascript
-Copy
-Edit
+
 let promise = new Promise(function (resolve, reject) {
   let pizzaBana = true;
 
@@ -49,6 +47,32 @@ promise
 🔚 Summary (Hinglish):
 Promise JavaScript ka ek future se result laane wala system hai.
 Agar kaam sahi hua, to .then() chalega. Agar kaam fail hua, to .catch() chalega.
+
+
+🔁 PROMISE SUMMARY (in 30 seconds)
+Concept	Description
+Promise	Something that may resolve or reject in future
+.then()	Runs when promise is fulfilled
+.catch()	Runs when promise is rejected
+.finally()	Always runs (success or error)
+
+🧠 Hinglish Summary (Permanent Yaad)
+Promise: "Main kuch time baad bataunga result."
+
+then: "Agar kaam ho gaya, toh yeh kar."
+
+catch: "Agar fail ho gaya, toh yeh kar."
+
+finally: "Jo bhi ho, end mein yeh kar."
+
+🧠 Memory Hook:
+🎬 "Imagine a waiter taking your order:
+🧑‍🍳 Promise: I'll bring your food (maybe).
+🍽️ Then: Here’s your food.
+💥 Catch: Sorry sir, order cancel ho gaya.
+🧹 Finally: Tip de do or go home."
+
+
 
 */
 
