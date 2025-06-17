@@ -88,6 +88,7 @@ filter()	[1, 2, 3]	  [2]	       Keep some items
 reduce()	[1, 2, 3]	  6	           Get a single result
 
 🧠 Hinglish Summary (For Permanent Yaad)
+
 Map: "Har cheez ko badlo, lekin sabko rakho."
 
 Filter: "Jo chahiye wahi rakho, baaki hata do."
