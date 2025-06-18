@@ -245,3 +245,25 @@ Return	Returns the created object automatically	(no need to write return)
 
   
   */
+
+function User(userName, userAge, isLoggedIn) {
+  this.userName = userName;
+  this.userAge = userAge;
+  this.isLoggedIn = isLoggedIn;
+}
+
+const userOne = new User("Alok", 22, true);
+const userTwo = new User("Malik", 23, false);
+console.log(userOne);
+console.log(userTwo);
+
+/*
+Note:
+
+step of "new" keyword:
+
+1. creates a new object
+2. calls the constructor function
+3. sets the value of "this" to the new object
+4. returns the new object
+*/
